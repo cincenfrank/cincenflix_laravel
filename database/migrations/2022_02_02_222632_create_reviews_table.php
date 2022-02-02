@@ -17,6 +17,7 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->foreignId('rating_id')->constrained('ratings');
             $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('season_id')->constrained('seasons');
             $table->string('title')->nullable();
             $table->longText('content')->nullable();
             $table->timestamps();
